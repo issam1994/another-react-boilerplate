@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+// router 
+import Routes from './router';
+//store
+import store from './store';
+import { StoreProvider } from 'easy-peasy'
+import { BrowserRouter } from 'react-router-dom';
+// styles 
+import './styles/transitions/index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider store={store}>
+      <BrowserRouter>
+        <div style={{position: "relative"}}>
+          <Routes />
+        </div>
+      </BrowserRouter>
+    </StoreProvider>
   );
 }
 
