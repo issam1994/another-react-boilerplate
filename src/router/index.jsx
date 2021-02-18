@@ -27,7 +27,7 @@ function Routes() {
       {routes.map(({ RoutesGroup, Layout, path, ...rest }) => (
         <Route key={path} path={path} {...rest}>
           <Layout>
-            <RoutesGroup />
+          <RoutesGroup />
           </Layout>
         </Route>
       ))}

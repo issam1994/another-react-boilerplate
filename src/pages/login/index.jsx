@@ -9,7 +9,7 @@ function Login() {
     <div className="">
       <h1>Login route</h1>
       <button onClick={() => fakeLogin("FAKE-TOKEN-001")}>fake log in</button>
-      <hr/>
+      <hr />
       <Link to={paths.REGISTER}>register</Link>
     </div>
   );
